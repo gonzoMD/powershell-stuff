@@ -39,7 +39,7 @@ if ($fileext -cmatch '^\*\.[^.]+$')
         if($files.Count -gt 0)
         {
             # remove $basepath part from DirectoryName to show only subdirectories
-            foreach ($pathname in $pdffiles)
+            foreach ($pathname in $files)
             {
                 $pathname.DirectoryName = $pathname.DirectoryName.Replace($basepath,'')
             }
