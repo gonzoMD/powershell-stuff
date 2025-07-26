@@ -32,7 +32,7 @@ if ($fileext -cmatch '^\*\.[^.]+$')
     if(Test-Path($basepath))
     {
 
-        # fetch the directory and full name of all pdf files inside $basepath and all its subdirectories in an object
+        # fetch the directory and full name of all $fileext files inside of $basepath and its subdirectories into an object
         $files = Get-ChildItem -Path $basepath -Filter $fileext -Recurse | Select-Object DirectoryName, Name
 
         # check if there are any files of the specified type
